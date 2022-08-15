@@ -15,10 +15,9 @@ body{
     margin:0px;
 }
 .localisation{
-    background-color: #f1efef;
+    background-color: #eaeaea;
     text-align: center;
     margin:0px;
-    padding:15px;
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -27,4 +26,25 @@ body{
 }
 .iconloc{
     margin-right: 15px;
+}
+.introduction{
+    text-align: center;
+    padding:35px;
+    background-color: #f6f6f6;
+}
+.titreintro{
+    margin:0px;
+}
+.texteintro{
+    color:#4e4e4e;
+}
+.boutonintro{
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    cursor: pointer;
+    box-shadow: 2px 2px 5px grey;
+    font-size:small;
+    margin:25px 70px 0px 70px; /*a changer*/
 }
