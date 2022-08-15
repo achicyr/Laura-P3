@@ -4,10 +4,27 @@
 }
 body{
     margin:0px;
+    font-family: 'Roboto', sans-serif;
 }
 .titrelogo{
     font-family: 'Shrikhand', cursive;
     text-align: center;
-    box-shadow: 2px 2px 3px #dbd9d9;
+    box-shadow: 1px 1px 5px #b7b4b4;
+    position: relative;
     padding-bottom:5px;
+    margin:0px;
+}
+.localisation{
+    background-color: #f1efef;
+    text-align: center;
+    margin:0px;
+    padding:15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-weight: bold;
+    color: #515152;
+}
+.iconloc{
+    margin-right: 15px;
 }
