@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0px;
+}
+.titrelogo{
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    box-shadow: 2px 2px 3px #dbd9d9;
+    padding-bottom:5px;
+}
