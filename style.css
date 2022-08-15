@@ -46,5 +46,8 @@ body{
     cursor: pointer;
     box-shadow: 2px 2px 5px grey;
     font-size:small;
-    margin:25px 70px 0px 70px; /*a changer*/
+    margin:25px 70px 10px 70px; /*a changer*/
+}
+.boutonintro:hover{
+    opacity:0.9;
 }
