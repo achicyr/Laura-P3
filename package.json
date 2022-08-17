@@ -1,0 +1,23 @@
+{
+  "name": "livrables",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets/SCSS/index.scss assets/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyber-laura/Projet-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyber-laura/Projet-3/issues"
+  },
+  "homepage": "https://github.com/Cyber-laura/Projet-3#readme",
+  "dependencies": {
+    "sass": "^1.54.4"
+  }
+}
