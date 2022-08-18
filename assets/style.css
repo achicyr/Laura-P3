@@ -434,6 +434,9 @@ body .introduction .boutonintro:hover {
   text-align: center;
   right: 10px;
 }
+.menu .card .cards__info {
+  position: relative;
+}
 .menu .card .cards__info__h3 {
   color: black;
   font-size: medium;
@@ -444,6 +447,40 @@ body .introduction .boutonintro:hover {
   margin: 0;
   color: black;
   padding-left: 10px;
+}
+.menu .card i.far {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  font-size: x-large;
+}
+.menu .card:hover .far {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
+
+footer {
+  background-color: #353535;
+  padding: 20px;
+}
+footer h3 {
+  color: white;
+  margin: 0;
+  font-family: "shrikhand", sans-serif;
+  font-weight: 100;
+}
+footer ul {
+  padding: 0;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer li {
+  margin-bottom: 5px;
+}
+footer i.fas {
+  padding-right: 10px;
+  font-size: small;
 }
 
 @media all and (min-width: 700px) {
@@ -457,6 +494,8 @@ body .introduction .boutonintro:hover {
   }
   .cards .card {
     margin: 10px;
+    display: grid;
+    position: relative;
   }
 }
 
