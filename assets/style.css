@@ -382,6 +382,12 @@ body .introduction .boutonintro:hover {
   margin-right: 15px;
 }
 
+.fonctionnement {
+  padding: 20px;
+}
+.fonctionnement ol {
+  padding: 0;
+}
 .fonctionnement li {
   padding: 20px;
   margin: 15px;
@@ -389,10 +395,39 @@ body .introduction .boutonintro:hover {
   border-radius: 20px;
   font-weight: 600;
   background: #f6f6f6;
+  flex-grow: 1;
 }
 .fonctionnement li i.fas {
   margin-right: 25px;
   color: #757575;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+.menu .card {
+  background-color: white;
+  border-radius: 20px;
+  height: 150px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+  min-width: 320px;
+  box-shadow: 2px 2px 5px grey;
+}
+
+@media all and (min-width: 700px) {
+  .fonctionnement ol {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards .card {
+    margin: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
