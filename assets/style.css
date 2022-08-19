@@ -448,14 +448,21 @@ body .introduction .boutonintro:hover {
   color: black;
   padding-left: 10px;
 }
-.menu .card i.far {
+.menu .card i {
   position: absolute;
   right: 10px;
   top: 40%;
   font-size: x-large;
 }
-.menu .card:hover .far {
+.menu .card .fas {
   background-image: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0;
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: all 200ms ease-in-out;
+}
+.menu .card:hover .fas {
+  opacity: 1;
 }
 
 footer {
