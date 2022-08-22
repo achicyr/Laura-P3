@@ -322,6 +322,33 @@ ul {
 }
 
 /**/ /**/ /**/
+.coverpicture img {
+  width: 100%;
+}
+
+.entrees {
+  position: relative;
+}
+.entrees h1 {
+  font-family: "shrikhand", sans-serif;
+}
+.entrees i {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  font-size: x-large;
+}
+.entrees .fas {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0;
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: all 200ms ease-in-out;
+}
+.entrees:hover .fas {
+  opacity: 1;
+}
+
 /***********************************/
 /***********************************/
 /***********************************/
