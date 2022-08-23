@@ -328,42 +328,78 @@ ul {
   object-fit: cover;
 }
 
-main {
+.menu1 {
   margin-top: -60px;
   background-color: #f6f6f6;
   position: relative;
   border-radius: 20px 20px 0px 0px;
 }
-
-.entrees {
-  position: relative;
-  padding: 20px;
-}
-.entrees h1 {
+.menu1 .menu1__h1 {
   font-family: "shrikhand", sans-serif;
   font-size: x-large;
-  padding-bottom: 20px;
+  padding: 35px 15px 0px 15px;
+  margin: 0;
 }
-.entrees i {
+.menu1 .menu1__far, .menu1 .menu1__fas {
   position: absolute;
-  right: 10px;
-  top: 40%;
+  right: 25px;
+  top: 4%;
   font-size: x-large;
 }
-.entrees .fas {
+.menu1 .menu1__fas {
   background-image: linear-gradient(#FF79DA, #9356DC);
   opacity: 0;
   color: transparent;
   -webkit-background-clip: text;
   transition: all 200ms ease-in-out;
 }
-.entrees:hover .fas {
+.menu1:hover .menu1__fas {
   opacity: 1;
 }
-.entrees h2 {
+
+.entrees {
+  position: relative;
+  padding: 20px;
+}
+.entrees .entrees__h2 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: large;
+}
+.entrees .container {
+  display: flex;
+  flex-direction: column;
+}
+.entrees .container__menus {
+  background: white;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px grey;
+}
+.entrees .container__h3 {
+  margin: 0;
+  padding: 15px 0px 0px 10px;
+  font-size: medium;
+}
+.entrees .container__p {
+  margin: 0;
+  padding: 0px 0px 15px 10px;
+}
+.entrees .container__price {
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  right: 35px;
+}
+.entrees .container__selection {
+  background: #99E2D0;
+  width: 15%;
+  right: 10px;
+  top: 0px;
+  position: absolute;
+  height: 67px;
 }
 
 /***********************************/
