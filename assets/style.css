@@ -328,11 +328,19 @@ ul {
   object-fit: cover;
 }
 
+.titrelogo__icon {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: black;
+}
+
 .menu1 {
   margin-top: -60px;
   background-color: #f6f6f6;
   position: relative;
   border-radius: 20px 20px 0px 0px;
+  padding-bottom: 35px;
 }
 .menu1 .menu1__h1 {
   font-family: "shrikhand", sans-serif;
@@ -433,6 +441,23 @@ ul {
 /*.container__menus:hover .container__icon{
   transform:rotate(0);
 }*/
+.bouton {
+  display: flex;
+  justify-content: center;
+}
+.bouton .bouton__commander {
+  padding: 15px 40px;
+  border-radius: 30px;
+  color: white;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  box-shadow: 2px 2px 5px grey;
+  text-align: center;
+}
+.bouton .bouton__commander:hover {
+  opacity: 0.9;
+}
+
 @keyframes quarter-spin {}
 @media all and (min-width: 1100px) {
   .cards-menu {
@@ -472,16 +497,18 @@ body .introduction .titreintro {
 body .introduction .texteintro {
   color: #4e4e4e;
 }
+body .introduction .introduction__bouton {
+  display: flex;
+  justify-content: center;
+}
 body .introduction .boutonintro {
-  padding: 10px;
+  padding: 15px 20px;
   border-radius: 20px;
   color: white;
   background-image: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
   box-shadow: 2px 2px 5px grey;
   font-size: small;
-  margin: 25px 70px 10px 70px;
-  /*a changer*/
 }
 body .introduction .boutonintro:hover {
   opacity: 0.9;
