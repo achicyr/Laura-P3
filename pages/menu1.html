@@ -18,8 +18,7 @@
     <main class="menu1">
         <div class="hearthover">
         <h1 class="menu1__h1">La palette du goût</h1>
-            <i class="far fa-heart menu1__far"></i>
-            <i class="fas fa-heart menu1__fas"></i>
+            <i class="far fa-heart menu1__far"><i class="fas fa-heart menu1__fas"></i></i>
         </div>
         <div class="cards-menu">
         <section class="entrees">
@@ -27,10 +26,21 @@
             <div></div>
             <div class="container">
             <div class="container__menus">
+                <div class="container__caption">
                 <h3 class="container__h3">Fricassée d'escargot</h3>
                 <p class="container__p">Au piment d'espelette</p>
-                <div class="container__price">25€</div>
-                <div class="container__selection">S</div>
+                </div>
+                <span class="container__price">25€</span>
+                <!--
+                    1.container__menu:hover>selection(width:100px)
+                    selction(top/right/bottom=0width)
+                    2.container__menu:hover>p(-100px)
+                -->
+                <div class="container__selection">
+                <div>
+                    <i class="fas fa-check container__icon"></i>
+                </div>
+                </div>
             </div>
             <div class="container__menus">
                 <h3 class="container__h3">Fois gras de cannard mi-cuit</h3>
@@ -52,7 +62,6 @@
                 <h3 class="container__h3">Filet de boeuf aux herbes</h3>
                 <p class="container__p">Accompagné de sa ribambelle de légumes</p>
                 <div class="container__price">40€</div>
-                <div class="container__selection">S</div>
             </div>
             <div class="container__menus">
                 <h3 class="container__h3">Parmentier de queue de boeuf</h3>
@@ -74,7 +83,6 @@
                 <h3 class="container__h3">Paris-Brest</h3>
                 <p class="container__p">Revisité</p>
                 <div class="container__price">18€</div>
-                <div class="container__selection">S</div>
             </div>
             <div class="container__menus">
                 <h3 class="container__h3">Macaron au chocolat d'exception</h3>

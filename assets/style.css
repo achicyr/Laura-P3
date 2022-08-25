@@ -333,9 +333,6 @@ ul {
   background-color: #f6f6f6;
   position: relative;
   border-radius: 20px 20px 0px 0px;
-  /*&:hover .menu1__fas{
-        opacity:1;
-  }*/
 }
 .menu1 .menu1__h1 {
   font-family: "shrikhand", sans-serif;
@@ -349,29 +346,20 @@ ul {
   top: 4%;
   font-size: x-large;
 }
-.menu1 .menu1__fas {
+.menu1 > .menu1__far > .menu1__fas {
   background-image: linear-gradient(#FF79DA, #9356DC);
-  opacity: 0;
+  clip: rect(24px, 24px, 24px, 0px);
   color: transparent;
   -webkit-background-clip: text;
   transition: all 200ms ease-in-out;
 }
-
-.hearthover :hover {
-  opacity: 1;
+.menu1 > .menu1__far:hover > .menu1__fas {
+  clip: rect(0px, 24px, 24px, 0px);
 }
 
 .entrees {
   position: relative;
   padding: 20px;
-  /*.container__selection{
-    background:$ternary;
-    width: 15%;
-    right: 10px;
-    top: 0px;
-    position: absolute;
-    height: 67px;
-  }*/
 }
 .entrees .entrees__h2 {
   text-transform: uppercase;
@@ -396,34 +384,56 @@ ul {
   background: white;
   margin-bottom: 10px;
   border-radius: 15px;
-  position: relative;
   cursor: pointer;
   box-shadow: 2px 2px 5px grey;
+  display: flex;
+  overflow: hidden;
 }
-.entrees .container__menus :hover {
-  background: #99E2D0;
-  width: 15%;
-  right: 10px;
-  top: 0px;
-  position: absolute;
-  height: 67px;
+.entrees .container__caption {
+  padding: 10px;
 }
 .entrees .container__h3 {
   margin: 0;
-  padding: 15px 0px 0px 10px;
   font-size: medium;
 }
 .entrees .container__p {
   margin: 0;
-  padding: 0px 0px 15px 10px;
 }
 .entrees .container__price {
   font-weight: 500;
-  position: absolute;
-  top: 50%;
-  right: 35px;
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+.entrees .container__selection {
+  background-color: #99E2D0;
+  margin-right: -50px;
+  width: 50px;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.entrees .container__icon {
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.container__menus:hover .container__selection {
+  margin-right: 0px;
+}
+
+/*.container__menus:hover .container__icon{
+  transform:rotate(0);
+}*/
+@keyframes quarter-spin {}
 @media all and (min-width: 1100px) {
   .cards-menu {
     display: flex;
@@ -544,6 +554,18 @@ body .introduction .boutonintro:hover {
   min-width: 320px;
   box-shadow: 2px 2px 5px grey;
   text-decoration: none;
+  /*>.far {
+      >.fas {
+        background-image: linear-gradient($secondary, $primary);
+        clip: rect(0px,24px,24px,0px);
+        color: transparent;
+        -webkit-background-clip: text;
+        transition: all 200ms ease-in-out;
+        background-color: pink;
+      }
+      &:hover>.fas{clip: rect(24px,24px,24px,0px)
+      }
+    }*/
 }
 .menu .card .cards__img {
   width: 100%;
@@ -581,17 +603,42 @@ body .introduction .boutonintro:hover {
   top: 40%;
   font-size: x-large;
 }
-.menu .card .fas {
+
+.far > .fas {
   background-image: linear-gradient(#FF79DA, #9356DC);
-  opacity: 0;
+  clip: rect(24px, 24px, 24px, 0px);
   color: transparent;
   -webkit-background-clip: text;
   transition: all 200ms ease-in-out;
 }
-.menu .card:hover .fas {
-  opacity: 1;
+.far:hover > .fas {
+  clip: rect(0px, 24px, 24px, 0px);
 }
 
+i.fas.fa-heart {
+  top: 0px;
+  right: 0px;
+}
+
+/*<div id="modal"></div>
+    <style>
+        #modal{
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color: black;
+            animation:spinner 1s 1;
+            animation: spinner 5s linear 2s 1 forwards;
+        }
+        @keyframes spinner{
+            0%{z-index: 100;background:red;opacity:1; }
+            90%{opacity:100%;}
+            100%{z-index: -1;background:blue;opacity:0;}
+        }
+    </style>
+*/
 footer {
   background-color: #353535;
   padding: 20px;
