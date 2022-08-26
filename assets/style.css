@@ -618,11 +618,11 @@ body .introduction .boutonintro:hover {
   position: relative;
   cursor: pointer;
 }
-.fonctionnement li i.fas {
+.fonctionnement i.fas {
   margin-right: 25px;
   color: #757575;
 }
-.fonctionnement li i.fas:hover {
+.fonctionnement i.fas:hover {
   color: #9356DC;
 }
 
@@ -642,17 +642,17 @@ body .introduction .boutonintro:hover {
   box-shadow: 2px 2px 5px grey;
   text-decoration: none;
   /*>.far {
-      >.fas {
-        background-image: linear-gradient($secondary, $primary);
-        clip: rect(0px,24px,24px,0px);
-        color: transparent;
-        -webkit-background-clip: text;
-        transition: all 200ms ease-in-out;
-        background-color: pink;
-      }
-      &:hover>.fas{clip: rect(24px,24px,24px,0px)
-      }
-    }*/
+    >.fas {
+      background-image: linear-gradient($secondary, $primary);
+      clip: rect(0px,24px,24px,0px);
+      color: transparent;
+      -webkit-background-clip: text;
+      transition: all 200ms ease-in-out;
+      background-color: pink;
+    }
+    &:hover>.fas{clip: rect(24px,24px,24px,0px)
+    }
+  }*/
 }
 .menu .card .cards__img {
   width: 100%;
