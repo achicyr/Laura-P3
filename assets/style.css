@@ -398,6 +398,35 @@ ul {
   overflow: hidden;
   white-space: nowrap;
   animation: menu 3s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+.entrees .play1 {
+  animation-delay: 0s;
+}
+.entrees .play2 {
+  animation-delay: 1s;
+}
+.entrees .play3 {
+  animation-delay: 2s;
+}
+.entrees .play4 {
+  animation-delay: 3s;
+}
+.entrees .play5 {
+  animation-delay: 4s;
+}
+.entrees .play6 {
+  animation-delay: 5s;
+}
+.entrees .play7 {
+  animation-delay: 6s;
+}
+.entrees .play8 {
+  animation-delay: 7s;
+}
+.entrees .play9 {
+  animation-delay: 8s;
 }
 .entrees .container__caption {
   padding: 10px;
@@ -468,42 +497,6 @@ ul {
 }
 .bouton .bouton__commander:hover {
   opacity: 0.9;
-}
-
-.play1 {
-  animation-delay: 0s;
-}
-
-.play2 {
-  animation-delay: 1s;
-}
-
-.play3 {
-  animation-delay: 2s;
-}
-
-.play4 {
-  animation-delay: 3s;
-}
-
-.play5 {
-  animation-delay: 4s;
-}
-
-.play6 {
-  animation-delay: 5s;
-}
-
-.play7 {
-  animation-delay: 6s;
-}
-
-.play8 {
-  animation-delay: 7s;
-}
-
-.play9 {
-  animation-delay: 8s;
 }
 
 @keyframes coche {
