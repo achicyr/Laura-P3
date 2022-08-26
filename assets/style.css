@@ -751,6 +751,35 @@ footer i.fas {
   font-size: small;
 }
 
+#modal {
+  position: fixed;
+  /*inset:0*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 1;
+  opacity: 0.9;
+  animation: spinner 1s;
+  animation: spinner 5s linear 2s 1 forwards;
+}
+
+@keyframes spinner {
+  0% {
+    z-index: 100;
+    background: red;
+    opacity: 1;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    z-index: -1;
+    background: blue;
+    opacity: 0;
+  }
+}
 @media all and (min-width: 700px) {
   .fonctionnement ol {
     display: flex;
