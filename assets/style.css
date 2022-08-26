@@ -396,16 +396,27 @@ ul {
   box-shadow: 2px 2px 5px grey;
   display: flex;
   overflow: hidden;
+  white-space: nowrap;
+  animation: menu 3s;
 }
 .entrees .container__caption {
   padding: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .entrees .container__h3 {
   margin: 0;
   font-size: medium;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .entrees .container__p {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .entrees .container__price {
   font-weight: 500;
@@ -439,7 +450,7 @@ ul {
 }
 
 .container__menus:hover i {
-  animation: quarterspin 1s ease;
+  animation: coche 1s ease;
 }
 
 .bouton {
@@ -459,12 +470,56 @@ ul {
   opacity: 0.9;
 }
 
-@keyframes quarterspin {
+.play1 {
+  animation-delay: 0s;
+}
+
+.play2 {
+  animation-delay: 1s;
+}
+
+.play3 {
+  animation-delay: 2s;
+}
+
+.play4 {
+  animation-delay: 3s;
+}
+
+.play5 {
+  animation-delay: 4s;
+}
+
+.play6 {
+  animation-delay: 5s;
+}
+
+.play7 {
+  animation-delay: 6s;
+}
+
+.play8 {
+  animation-delay: 7s;
+}
+
+.play9 {
+  animation-delay: 8s;
+}
+
+@keyframes coche {
   0% {
     transform: rotate(-270deg);
   }
   100% {
     transform: rotate(0);
+  }
+}
+@keyframes menu {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @media all and (min-width: 1100px) {
