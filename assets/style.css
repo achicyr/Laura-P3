@@ -765,6 +765,11 @@ footer i.fas {
     transform: rotate(360deg);
   }
 }
+@media all and (min-width: 1000px) {
+  .fonctionnement ul {
+    display: flex;
+  }
+}
 @media all and (min-width: 700px) {
   .fonctionnement ol {
     display: flex;
