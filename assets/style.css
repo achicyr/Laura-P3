@@ -1,4 +1,6 @@
 /**/ /**/ /**/ /**/ /**/
+/*Border-radius*/
+/*Box-shadow*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 * {
@@ -327,6 +329,61 @@ ul {
 }
 
 /**/ /**/
+.restaurants {
+  background: #f6f6f6;
+  padding: 20px;
+}
+.restaurants__card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  height: 240px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+  min-width: 320px;
+  box-shadow: 2px 2px 5px gray;
+  text-decoration: none;
+  color: black;
+}
+.restaurants__img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurants__new {
+  position: absolute;
+  width: 80px;
+  background-color: #99E2D0;
+  padding: 5px;
+  margin: 20px;
+  color: #008160;
+  text-align: center;
+  right: 10px;
+  font-weight: 500;
+}
+.restaurants__info {
+  position: relative;
+}
+.restaurants__info__h3 {
+  color: black;
+  font-size: medium;
+  padding-left: 10px;
+  margin: 15px 0px 5px 0px;
+}
+.restaurants__info__p {
+  margin: 0;
+  color: black;
+  padding-left: 10px;
+}
+.restaurants i {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  font-size: x-large;
+}
+
 .introduction {
   text-align: center;
   padding: 35px;
@@ -363,6 +420,64 @@ ul {
   margin: auto;
   width: 180px;
   padding: 10px;
+}
+
+.localisation__lieu {
+  background-color: #eaeaea;
+  text-align: center;
+  margin: 0px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-weight: bold;
+  color: #515152;
+  box-shadow: 0px 15px 10px -15px grey inset;
+}
+.localisation__iconloc {
+  margin-right: 15px;
+}
+
+.fonctionnement {
+  padding: 20px;
+}
+.fonctionnement ul {
+  padding: 0;
+  counter-reset: compteListe;
+}
+.fonctionnement__number:hover {
+  background-color: #f5edff;
+}
+.fonctionnement__number:hover i {
+  color: #9356DC;
+}
+.fonctionnement__number:before {
+  background-color: #9356DC;
+  height: 24px;
+  width: 25px;
+  border-radius: 15px;
+  left: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f6f6f6;
+  position: absolute;
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+}
+.fonctionnement li {
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 1px 1px 7px #c3baba;
+  border-radius: 20px;
+  font-weight: 600;
+  background: #f6f6f6;
+  flex-grow: 1;
+  position: relative;
+  cursor: pointer;
+}
+.fonctionnement i.fas {
+  margin-right: 25px;
+  color: #757575;
 }
 
 .coverpicture img {
@@ -438,7 +553,7 @@ ul {
   margin-bottom: 10px;
   border-radius: 15px;
   cursor: pointer;
-  box-shadow: 2px 2px 5px grey;
+  box-shadow: 2px 2px 5px gray;
   display: flex;
   overflow: hidden;
   white-space: nowrap;
@@ -520,10 +635,10 @@ ul {
 .bouton .bouton__commander {
   padding: 15px 40px;
   border-radius: 30px;
-  color: white;
+  color: #f6f6f6;
   background-image: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
-  box-shadow: 2px 2px 5px grey;
+  box-shadow: 2px 2px 5px gray;
   text-align: center;
 }
 .bouton .bouton__commander:hover {
@@ -557,120 +672,6 @@ ul {
     width: 100%;
   }
 }
-.localisation__lieu {
-  background-color: #eaeaea;
-  text-align: center;
-  margin: 0px;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  font-weight: bold;
-  color: #515152;
-  box-shadow: 0px 15px 10px -15px grey inset;
-}
-
-.localisation__iconloc {
-  margin-right: 15px;
-}
-
-.fonctionnement {
-  padding: 20px;
-}
-.fonctionnement ul {
-  padding: 0;
-  counter-reset: compteListe;
-}
-.fonctionnement .fonctionnement__number:hover {
-  background-color: #f5edff;
-}
-.fonctionnement .fonctionnement__number:hover i {
-  color: #9356DC;
-}
-.fonctionnement .fonctionnement__number:before {
-  background-color: #9356DC;
-  height: 24px;
-  width: 25px;
-  border-radius: 15px;
-  left: -15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  position: absolute;
-  counter-increment: compteListe 1;
-  content: counter(compteListe) " ";
-}
-.fonctionnement li {
-  padding: 20px;
-  margin: 15px;
-  box-shadow: 1px 1px 7px #c3baba;
-  border-radius: 20px;
-  font-weight: 600;
-  background: #f6f6f6;
-  flex-grow: 1;
-  position: relative;
-  cursor: pointer;
-}
-.fonctionnement i.fas {
-  margin-right: 25px;
-  color: #757575;
-}
-
-.restaurants {
-  background: #f6f6f6;
-  padding: 20px;
-}
-.restaurants .restaurants__card {
-  display: flex;
-  flex-direction: column;
-  background-color: #f6f6f6;
-  border-radius: 20px;
-  height: 240px;
-  margin-bottom: 10px;
-  flex-grow: 1;
-  min-width: 320px;
-  box-shadow: 2px 2px 5px grey;
-  text-decoration: none;
-  color: black;
-}
-.restaurants .restaurants__card .restaurants__img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
-}
-.restaurants .restaurants__card .restaurants__new {
-  position: absolute;
-  width: 80px;
-  background-color: #99E2D0;
-  padding: 5px;
-  margin: 20px;
-  color: #008160;
-  text-align: center;
-  right: 10px;
-  font-weight: 500;
-}
-.restaurants .restaurants__card .restaurants__info {
-  position: relative;
-}
-.restaurants .restaurants__card .restaurants__info__h3 {
-  color: black;
-  font-size: medium;
-  padding-left: 10px;
-  margin: 15px 0px 5px 0px;
-}
-.restaurants .restaurants__card .restaurants__info__p {
-  margin: 0;
-  color: black;
-  padding-left: 10px;
-}
-.restaurants .restaurants__card i {
-  position: absolute;
-  right: 10px;
-  top: 40%;
-  font-size: x-large;
-}
-
 .far > .fas {
   background-image: linear-gradient(#FF79DA, #9356DC);
   clip: rect(24px, 24px, 24px, 0px);
@@ -692,7 +693,7 @@ footer {
   padding: 20px;
 }
 footer h3 {
-  color: white;
+  color: #f6f6f6;
   margin: 0;
   font-family: "shrikhand", sans-serif;
   font-weight: 100;
@@ -702,7 +703,7 @@ footer ul {
 }
 footer a {
   text-decoration: none;
-  color: white;
+  color: #f6f6f6;
 }
 footer li {
   margin-bottom: 5px;
@@ -714,11 +715,7 @@ footer i.fas {
 
 #modal {
   position: fixed;
-  /*inset:0*/
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 1;
   opacity: 0.9;
   animation: spinner 3s linear 0s 1 forwards;
@@ -771,5 +768,76 @@ footer i.fas {
     position: relative;
   }
 }
+/*@media all and (max-width:$mobile) {
+  body {
+    &>header {}
+
+    &>nav {}
+
+    &>main {
+      &>section {}
+
+      &>article {}
+    }
+
+    &>footer {
+      &>ul {}
+    }
+  }
+}
+
+@media all and (min-width:$mobile) and (max-width:$tablette) {
+  body {
+    &>header {}
+
+    &>nav {}
+
+    &>main {
+      &>section {}
+
+      &>article {}
+    }
+
+    &>footer {
+      &>ul {}
+    }
+  }
+}
+
+@media all and (min-width:$desktop) and (max-width:$tv) {
+  body {
+    &>header {}
+
+    &>nav {}
+
+    &>main {
+      &>section {}
+
+      &>article {}
+    }
+
+    &>footer {
+      &>ul {}
+    }
+  }
+}
+
+@media all and (min-width:$tv) {
+  body {
+    &>header {}
+
+    &>nav {}
+
+    &>main {
+      &>section {}
+
+      &>article {}
+    }
+
+    &>footer {
+      &>ul {}
+    }
+  }
+}*/
 
 /*# sourceMappingURL=style.css.map */
