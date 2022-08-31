@@ -647,6 +647,7 @@ body .boutonintro:hover {
   min-width: 320px;
   box-shadow: 2px 2px 5px grey;
   text-decoration: none;
+  color: black;
 }
 .menu .card .cards__img {
   width: 100%;
