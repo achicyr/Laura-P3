@@ -399,38 +399,20 @@ ul {
   overflow: hidden;
   white-space: nowrap;
   animation: menu 3s;
-  transform: scale(0);
+  position: relative;
   animation-fill-mode: both;
 }
 .entrees .play1 {
   animation-delay: 0s;
 }
 .entrees .play2 {
-  animation-delay: 1s;
+  animation-delay: 0.1s;
 }
 .entrees .play3 {
-  animation-delay: 2s;
+  animation-delay: 0.2s;
 }
 .entrees .play4 {
-  animation-delay: 3s;
-}
-.entrees .play5 {
-  animation-delay: 4s;
-}
-.entrees .play6 {
-  animation-delay: 5s;
-}
-.entrees .play7 {
-  animation-delay: 6s;
-}
-.entrees .play8 {
-  animation-delay: 7s;
-}
-.entrees .play9 {
-  animation-delay: 8s;
-}
-.entrees .play10 {
-  animation-delay: 9s;
+  animation-delay: 0.3s;
 }
 .entrees .container__caption {
   padding: 10px;
@@ -513,10 +495,12 @@ ul {
 }
 @keyframes menu {
   0% {
-    transform: scale(0);
+    bottom: -100px;
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    bottom: 0px;
+    opacity: 1;
   }
 }
 @media all and (min-width: 1100px) {
