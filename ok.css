@@ -1,0 +1,79 @@
+@media (min-width: 700px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards .card {
+    margin: 10px;
+    display: grid;
+    position: relative;
+  }
+}
+.menu {
+  background: #f6f6f6;
+  padding: 20px;
+}
+@media all and (min-width: 700px) {
+  .menu .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .menu .cards .card {
+    margin: 10px;
+    display: grid;
+    position: relative;
+  }
+}
+.cards__card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  height: 240px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+  min-width: 320px;
+  box-shadow: 2px 2px 5px grey;
+  text-decoration: none;
+  margin: 10px;
+  display: grid;
+  position: relative;
+}
+.cards__img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+.cards__new {
+  position: absolute;
+  width: 80px;
+  background-color: #99E2D0;
+  padding: 5px;
+  margin: 20px;
+  color: #008160;
+  text-align: center;
+  right: 10px;
+}
+.cards__info {
+  position: relative;
+}
+.cards__info > h3 {
+  color: black;
+  font-size: medium;
+  padding-left: 10px;
+  margin: 15px 0px 5px 0px;
+}
+.cards__info > p {
+  margin: 0;
+  color: black;
+  padding-left: 10px;
+}
+.cards__info i {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  font-size: x-large;
+}
+
+/*# sourceMappingURL=ok.css.map */
