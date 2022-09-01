@@ -1,6 +1,7 @@
-/**/ /**/ /**/ /**/ /**/
+/**/
 /*Border-radius*/
 /*Box-shadow*/
+/**/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 * {
@@ -328,7 +329,61 @@ ul {
   list-style: none;
 }
 
-/**/ /**/
+/**/
+@keyframes spinner {
+  0% {
+    z-index: 100;
+    background: #FF79DA;
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    z-index: -1;
+    background: #9356DC;
+    opacity: 0;
+  }
+}
+@keyframes turn {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes coche {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes menu {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+.far > .fas {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  clip: rect(24px, 24px, 24px, 0px);
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: all 200ms ease-in-out;
+}
+.far:hover > .fas {
+  clip: rect(0px, 24px, 24px, 0px);
+}
+
+i.fas.fa-heart {
+  top: 0px;
+  right: 0px;
+}
+
 .restaurants {
   background: #f6f6f6;
   padding: 20px;
@@ -414,12 +469,83 @@ ul {
   box-shadow: 4px 4px 7px grey;
 }
 
+.bouton {
+  display: flex;
+  justify-content: center;
+}
+.bouton__commander {
+  padding: 15px 40px;
+  border-radius: 30px;
+  color: #f6f6f6;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  box-shadow: 2px 2px 5px gray;
+  text-align: center;
+}
+.bouton__commander:hover {
+  opacity: 0.9;
+  box-shadow: 4px 4px 7px grey;
+}
+
+#modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: spinner 3s linear 0s 1 forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#modal i {
+  animation: turn 3s infinite linear reverse;
+  color: #99E2D0;
+}
+
 /**/
 .titrelogo__logo {
   display: block;
   margin: auto;
   width: 180px;
   padding: 10px;
+}
+
+.titrelogo__icon {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: black;
+}
+
+.coverpicture img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #353535;
+  padding: 20px;
+}
+footer h3 {
+  color: #f6f6f6;
+  margin: 0;
+  font-family: "shrikhand", sans-serif;
+  font-weight: 100;
+}
+footer ul {
+  padding: 0;
+}
+footer a {
+  text-decoration: none;
+  color: #f6f6f6;
+}
+footer li {
+  margin-bottom: 5px;
+}
+footer i.fas {
+  padding-right: 10px;
+  font-size: small;
 }
 
 .localisation__lieu {
@@ -480,19 +606,6 @@ ul {
   color: #757575;
 }
 
-.coverpicture img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-}
-
-.titrelogo__icon {
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  color: black;
-}
-
 .menu {
   margin-top: -60px;
   background-color: #f6f6f6;
@@ -500,42 +613,40 @@ ul {
   border-radius: 20px 20px 0px 0px;
   padding-bottom: 35px;
 }
-.menu .menu__h1 {
+.menu__h1 {
   font-family: "shrikhand", sans-serif;
   font-size: x-large;
   padding: 35px 15px 0px 15px;
   margin: 0;
 }
-.menu .menu__far,
-.menu .menu__fas {
+.menu__far, .menu__fas {
   position: absolute;
   right: 25px;
   top: 3.3%;
   font-size: x-large;
 }
-.menu > .menu__far > .menu__fas {
+.menu__far__fas {
   background-image: linear-gradient(#FF79DA, #9356DC);
   clip: rect(24px, 24px, 24px, 0px);
   color: transparent;
   -webkit-background-clip: text;
   transition: all 200ms ease-in-out;
 }
-.menu > .menu__far:hover > .menu__fas {
+.menu__far:hover > .menu__far__fas {
   clip: rect(0px, 24px, 24px, 0px);
 }
-
 .menu__bloc {
   position: relative;
   padding: 20px;
   overflow: hidden;
 }
-.menu__bloc .menu__h2 {
+.menu__h2 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: large;
   position: relative;
 }
-.menu__bloc .menu__h2::after {
+.menu__h2::after {
   content: "";
   background-color: #99E2D0;
   position: absolute;
@@ -544,11 +655,11 @@ ul {
   top: 20px;
   left: 0px;
 }
-.menu__bloc .menu__container {
+.menu__container {
   display: flex;
   flex-direction: column;
 }
-.menu__bloc .menu__menus {
+.menu__menus {
   background: #f6f6f6;
   margin-bottom: 10px;
   border-radius: 15px;
@@ -561,46 +672,46 @@ ul {
   position: relative;
   animation-fill-mode: both;
 }
-.menu__bloc .play1 {
+.menu .play1 {
   animation-delay: 0s;
 }
-.menu__bloc .play2 {
+.menu .play2 {
   animation-delay: 0.1s;
 }
-.menu__bloc .play3 {
+.menu .play3 {
   animation-delay: 0.2s;
 }
-.menu__bloc .play4 {
+.menu .play4 {
   animation-delay: 0.3s;
 }
-.menu__bloc .menu__caption {
+.menu__caption {
   padding: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   flex: 1;
 }
-.menu__bloc .menu__h3 {
+.menu__h3 {
   margin: 0;
   font-size: medium;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.menu__bloc .menu__p {
+.menu__p {
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.menu__bloc .menu__price {
+.menu__price {
   font-weight: 500;
   margin-left: auto;
   display: flex;
   align-items: flex-end;
   padding: 10px;
 }
-.menu__bloc .menu__selection {
+.menu__selection {
   background-color: #99E2D0;
   margin-right: -50px;
   width: 50px;
@@ -609,7 +720,7 @@ ul {
   align-items: center;
   justify-content: center;
 }
-.menu__bloc .menu__icon {
+.menu__icon {
   background-color: #f6f6f6;
   color: #99E2D0;
   border-radius: 15px;
@@ -619,138 +730,22 @@ ul {
   align-items: center;
   justify-content: center;
 }
-
 .menu__menus:hover .menu__selection {
   margin-right: 0px;
 }
-
 .menu__menus:hover i {
   animation: coche 1s ease;
 }
 
-.bouton {
-  display: flex;
-  justify-content: center;
-}
-.bouton .bouton__commander {
-  padding: 15px 40px;
-  border-radius: 30px;
-  color: #f6f6f6;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  cursor: pointer;
-  box-shadow: 2px 2px 5px gray;
-  text-align: center;
-}
-.bouton .bouton__commander:hover {
-  opacity: 0.9;
-  box-shadow: 4px 4px 7px grey;
-}
-
-@keyframes coche {
-  0% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-@keyframes menu {
-  0% {
-    bottom: -100px;
-    opacity: 0;
-  }
-  100% {
-    bottom: 0px;
-    opacity: 1;
-  }
-}
 @media all and (min-width: 1100px) {
+  .fonctionnement ul {
+    display: flex;
+  }
   .menu__cards {
     display: flex;
   }
   .menu__bloc {
     width: 100%;
-  }
-}
-.far > .fas {
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  clip: rect(24px, 24px, 24px, 0px);
-  color: transparent;
-  -webkit-background-clip: text;
-  transition: all 200ms ease-in-out;
-}
-.far:hover > .fas {
-  clip: rect(0px, 24px, 24px, 0px);
-}
-
-i.fas.fa-heart {
-  top: 0px;
-  right: 0px;
-}
-
-footer {
-  background-color: #353535;
-  padding: 20px;
-}
-footer h3 {
-  color: #f6f6f6;
-  margin: 0;
-  font-family: "shrikhand", sans-serif;
-  font-weight: 100;
-}
-footer ul {
-  padding: 0;
-}
-footer a {
-  text-decoration: none;
-  color: #f6f6f6;
-}
-footer li {
-  margin-bottom: 5px;
-}
-footer i.fas {
-  padding-right: 10px;
-  font-size: small;
-}
-
-#modal {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  animation: spinner 3s linear 0s 1 forwards;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#modal i {
-  animation: turn 3s infinite linear reverse;
-  color: #99E2D0;
-}
-
-@keyframes spinner {
-  0% {
-    z-index: 100;
-    background: #FF79DA;
-    opacity: 0.9;
-  }
-  90% {
-    opacity: 0.9;
-  }
-  100% {
-    z-index: -1;
-    background: #9356DC;
-    opacity: 0;
-  }
-}
-@keyframes turn {
-  0% {
-    transform: rotate(360deg);
-  }
-}
-@media all and (min-width: 1000px) {
-  .fonctionnement ul {
-    display: flex;
   }
 }
 @media all and (min-width: 700px) {
@@ -768,76 +763,5 @@ footer i.fas {
     position: relative;
   }
 }
-/*@media all and (max-width:$mobile) {
-  body {
-    &>header {}
-
-    &>nav {}
-
-    &>main {
-      &>section {}
-
-      &>article {}
-    }
-
-    &>footer {
-      &>ul {}
-    }
-  }
-}
-
-@media all and (min-width:$mobile) and (max-width:$tablette) {
-  body {
-    &>header {}
-
-    &>nav {}
-
-    &>main {
-      &>section {}
-
-      &>article {}
-    }
-
-    &>footer {
-      &>ul {}
-    }
-  }
-}
-
-@media all and (min-width:$desktop) and (max-width:$tv) {
-  body {
-    &>header {}
-
-    &>nav {}
-
-    &>main {
-      &>section {}
-
-      &>article {}
-    }
-
-    &>footer {
-      &>ul {}
-    }
-  }
-}
-
-@media all and (min-width:$tv) {
-  body {
-    &>header {}
-
-    &>nav {}
-
-    &>main {
-      &>section {}
-
-      &>article {}
-    }
-
-    &>footer {
-      &>ul {}
-    }
-  }
-}*/
 
 /*# sourceMappingURL=style.css.map */
